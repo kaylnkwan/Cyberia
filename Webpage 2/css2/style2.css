@@ -1,0 +1,509 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: sans-serif;
+  font-size: 160%;
+}
+
+header,
+footer {
+  min-height: 0px;
+}
+
+#hello {
+  background-position: center;
+  /*centers the title in the middle*/
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+  font-size: 500px;
+  font-family: 'Roboto', sans-serif;
+  /*main font per page*/
+  color: #000000;
+}
+
+
+/*the hello diagonal*/
+
+.diagonal {
+  background-color: #ffffff;
+  min-height: 740px;
+  /*most diaonals are this height to remain consistant */
+  background-attachment: fixed;
+  /*parallex*/
+}
+
+
+/*the readify diagonal*/
+
+.diagonal2 {
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(70deg, #ffffff 50%, #000000 50%);
+  /*creates a diagonal with two toned colors*/
+  min-height: 740px;
+  background-attachment: fixed;
+}
+
+
+/*the snack bar button and imagine diagonal*/
+
+.diagonal3 {
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(70deg, #000000 50%, #ffffff 50%);
+  min-height: 740px;
+  background-attachment: fixed;
+}
+
+
+/*the user rating system diagonal*/
+
+.diagonal4 {
+  background-color: #013A6B;
+  background-image: -webkit-linear-gradient(70deg, #ffffff 50%, #000000 50%);
+  min-height: 740px;
+  background-attachment: fixed;
+}
+
+
+/*the video diagonal*/
+
+.diagonal5 {
+  background-color: #000000;
+  min-height: 600px;
+  background-attachment: fixed;
+}
+
+
+/*the information flipped diagonal*/
+
+.diagonal6 {
+  background-attachment: fixed;
+}
+
+
+/*the app embed diagonal (not really a diagonal)*/
+
+.diagonal7 {
+  background-color: black;
+  min-height: 760px;
+  background-attachment: fixed;
+}
+
+
+/*the quote diagonal (not really a diagonal)*/
+
+.diagonal8 {
+  background-color: #ffffff;
+  height: 300px;
+  background-attachment: fixed;
+}
+
+#quote {
+  /*mr p's quote*/
+  color: black;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 200px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#by {
+  /*quote by...*/
+  padding-top: 30px;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+#readify {
+  /*readify logo on diagnoal 2*/
+  -webkit-transform: rotate(20deg);
+  /*rotated to place on diagonal line*/
+  color: #ffffff;
+  background-position: center;
+  text-align: center;
+  padding-top: 220px;
+  margin: 0;
+  font-size: 200px;
+  letter-spacing: 6px;
+  font-weight: 520;
+}
+
+.app {
+  margin-top: 60px;
+  margin-left: 550px;
+}
+
+#generalinfo {
+  /*general info on flipped diagonal*/
+  background-position: center;
+  text-align: center;
+  padding-top: 200px;
+  margin: 0;
+  font-size: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  /*snackbar button*/
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 650px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  /*when clicked*/
+  margin-bottom: 60px;
+}
+
+.button:hover {
+  background-color: #4f4f4f;
+  color: white;
+  /*when hovering over button, new background color and font color appears*/
+}
+
+.button:active {
+  background-color: grey;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  /* When clicking button*/
+}
+
+.button-text {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* The snackbar*/
+
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  margin-left: -300px;
+  background-color: rgb(163, 163, 163, 0.5);
+  /* Grey background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+}
+
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+
+#snackbar.show {
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar*/
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+
+/*flipped diagonal container*/
+
+.container {
+  position: relative;
+  width: 100%
+}
+
+
+/*image behind the information when flipped*/
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 74vh;
+}
+
+
+/*overlay on yellow image - with info*/
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  /*half opacity*/
+  background-image: -webkit-linear-gradient(70deg, #000000 50%, #ffffff 50%);
+  /*diagonal on overlay*/
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  transition: .3s ease;
+  /*fade in transition*/
+  -webkit-transform: rotate(180deg);
+  /*rotated overlay so it flips when hovered*/
+}
+
+
+/*fade in overlay*/
+
+.container:hover .overlay {
+  transform: scale(1)
+}
+
+
+/*information on diagonal on flipped overlay*/
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(20deg);
+  /*rotate text 20 degrees*/
+  margin-right: 300px;
+  margin-top: 5px;
+  line-height: 30px;
+}
+
+
+/*information under diagonal text - this is straight none rotated info*/
+
+#moretext {
+  padding-top: 100px;
+  -webkit-transform: rotate(-20deg);
+  /*straightens info*/
+  margin-left: 70px;
+  margin-right: 300px;
+  line-height: 40px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+
+/*contact bar at bottom of page*/
+
+.contact-bar {
+  background-color: #000000;
+  padding: 35px 0px;
+  word-spacing: 20px;
+}
+
+
+/*links to social media*/
+
+.contact-link {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.contact-link svg {
+  fill: transparent;
+  /*svg appearance (social media icons)*/
+}
+
+.contact-link path {
+  fill: black;
+}
+
+
+/*user rating */
+
+* {
+  box-sizing: border-box;
+}
+
+.body2 {
+  font-family: Arial;
+  margin: 0 auto;
+  /* Center website */
+  max-width: 800px;
+  /* Max width */
+  padding: 20px;
+  padding-top: 200px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: white;
+}
+
+
+/* Three column layout */
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+
+/* Place text to the right */
+
+.right {
+  text-align: right;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* The bar container */
+
+.bar-container {
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  color: black;
+}
+
+
+/* Individual bars */
+
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #ffffff;
+}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+
+@media (max-width: 400px) {
+  .side,
+  .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+
+#backgroundvideo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 140vh;
+}
